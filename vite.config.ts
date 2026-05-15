@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  // Base harus sesuai dengan nama repository GitHub kamu
-  base: '/gomu-cookies/', 
+  base: './', // Gunakan titik satu agar dia mencari di folder yang sama
   plugins: [react(), tailwindcss()],
 })
