@@ -23,9 +23,9 @@ import { motion, AnimatePresence } from "motion/react";
 // ─── CONSTANTS ───
 
 const PRODUCTS = [
-  { id: 1, name: "Original",    price: 15000, image: "/gomu-cookies/original.jpeg",   description: "GOMU's Signature Original Cookie with premium chocolate chips and artisanal dough." },
-  { id: 2, name: "Smores",      price: 18000, image: "/gomu-cookies/snores.jpeg",      description: "GOMU's Signature Smores Cookie with gooey marshmallow filling and rich chocolate chunks." },
-  { id: 3, name: "Red Velvet",  price: 20000, image: "gomu-cookies/red_velvet.jpeg",  description: "GOMU's Signature Red Velvet Cookie with creamy white chocolate chips and a vibrant cocoa base." },
+  { id: 1, name: "Original",    price: 15000, image: "https://i.ibb.co.com/fdC6M18T/original.jpg",   description: "GOMU's Signature Original Cookie with premium chocolate chips and artisanal dough." },
+  { id: 2, name: "Smores",      price: 18000, image: "https://i.ibb.co.com/bg7Mv0BN/snores.jpg",      description: "GOMU's Signature Smores Cookie with gooey marshmallow filling and rich chocolate chunks." },
+  { id: 3, name: "Red Velvet",  price: 20000, image: "https://i.ibb.co.com/fjrhY4Q/red-velvet.jpg",  description: "GOMU's Signature Red Velvet Cookie with creamy white chocolate chips and a vibrant cocoa base." },
 ];
 
 const WHATSAPP_NUMBER = "6281370380333"; 
@@ -140,7 +140,7 @@ export default function App() {
             className="flex items-center gap-3 group"
           >
             <img 
-              src="logo.png" 
+              src="https://i.ibb.co.com/kVD1LN40/logo.png" 
               alt="GOMU logo" 
               onError={(e) => handleImageError(e, 'logo')}
               className="h-10 w-10 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform"
@@ -359,7 +359,7 @@ export default function App() {
               <div className="absolute inset-0 bg-[#FDEBD0] rounded-full blur-3xl opacity-50 -z-10" />
               <div className="bg-[#FDEBD0] rounded-full p-10 md:p-14 inline-block shadow-inner">
                 <img 
-                  src="logo.png" 
+                  src="https://i.ibb.co.com/kVD1LN40/logo.png" 
                   alt="GOMU Story" 
                   onError={(e) => handleImageError(e, 'logo')}
                   className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl ring-8 ring-white"
@@ -704,7 +704,13 @@ function CheckoutPage({ cart, onBack }: { cart: CartItem[], onBack: () => void }
                     />
                     <div className="w-12 h-8 flex items-center justify-center overflow-hidden rounded bg-white p-1">
                       <img 
-                        src={`${method.toLowerCase()}.png`} 
+                        src={
+                          method === 'QRIS' ? 'https://i.ibb.co.com/0RdL6gnH/qris.png' :
+                          method === 'ShopeePay' ? 'https://i.ibb.co.com/PvHJn1bq/shopeepay.png' :
+                          method === 'GoPay' ? 'https://i.ibb.co.com/B29tNDR0/gopay.png' :
+                          method === 'OVO' ? 'https://i.ibb.co.com/qMr53Z0V/ovo.png' :
+                          ''
+                        } 
                         alt={method}
                         className="w-full h-full object-contain"
                         onError={(e) => (e.currentTarget.style.display = 'none')}
