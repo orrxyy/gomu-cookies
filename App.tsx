@@ -23,9 +23,9 @@ import { motion, AnimatePresence } from "motion/react";
 // ─── CONSTANTS ───
 
 const PRODUCTS = [
-  { id: 1, name: "Original",    price: 15000, image: "original.jpeg",   description: "GOMU's Signature Original Cookie with premium chocolate chips and artisanal dough." },
-  { id: 2, name: "Smores",      price: 18000, image: "snores.jpeg",      description: "GOMU's Signature Smores Cookie with gooey marshmallow filling and rich chocolate chunks." },
-  { id: 3, name: "Red Velvet",  price: 20000, image: "red_velvet.jpeg",  description: "GOMU's Signature Red Velvet Cookie with creamy white chocolate chips and a vibrant cocoa base." },
+  { id: 1, name: "Original",    price: 15000, image: "/gomu-cookies/original.jpeg",   description: "GOMU's Signature Original Cookie with premium chocolate chips and artisanal dough." },
+  { id: 2, name: "Smores",      price: 18000, image: "/gomu-cookies/snores.jpeg",      description: "GOMU's Signature Smores Cookie with gooey marshmallow filling and rich chocolate chunks." },
+  { id: 3, name: "Red Velvet",  price: 20000, image: "gomu-cookies/red_velvet.jpeg",  description: "GOMU's Signature Red Velvet Cookie with creamy white chocolate chips and a vibrant cocoa base." },
 ];
 
 const WHATSAPP_NUMBER = "6281370380333"; 
